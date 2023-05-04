@@ -9,19 +9,44 @@ function userOptions(){
   // Create Var for each criteria [length, lowercase, uppercase, numbers, special char]
   // Create option obj with each of those var var options:{ length: length... etc} return obj
   var passwordlength = prompt(" How long would you like your password to be")
-  console.log (passwordlength);
+  
 
   if(isNaN(passwordlength)) {
-    
+    alert("Your entry has to be a number")
+    userOptions();
   }
 
+  if(passwordlength < 8 || passwordlength > 128){
+    alert("Your password has to be between 8 and 128 characters")
+    userOptions();
+    var userTrueFalse = confirm(passwordlength < 8 || passwordlength > 128)
+  }
+  // confirms to check to see if the user wants to use lower case, upcase, ...
+// generate password
+
+
+return {length: passwordlength}
 }
+// check to make sure they picked at lease one
+// document.getElementById
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+
 function generatePassword(){
- var options = userOptions()
+var randomElement = 0 
+var tempPw = ""
+  var options = userOptions()
+  console.log (options.length)
+  for (let i = 0; i < Number(options.length); i++) {
+     randomElement = uppercase[Math.floor(Math.random() * uppercase.length)];
+     tempPw += randomElement
+//  console.log(randomElement)
+  }
+  console.log(tempPw)
+  return tempPw
   // generate a random password
+  // console.log(array)
   // pass
 
 
