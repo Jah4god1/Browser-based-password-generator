@@ -1,1 +1,2 @@
 # Browser-based-password-generator
+This is a password generator that generates a random password based on the character amount you choose as well as give alerts that have to be answered correctly or a second alert will pop up with a error notification

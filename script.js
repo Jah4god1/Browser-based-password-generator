@@ -33,7 +33,7 @@ return {length: passwordlength}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword(){g
+function generatePassword(){
 var randomElement = 0 
 var tempPw = ""
   var options = userOptions()
